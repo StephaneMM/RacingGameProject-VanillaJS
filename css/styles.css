@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-div {
+  height: 750px;
+  width: 375px;
+  border: 1px solid black;
+  margin: 0 auto;
+  position: relative;
+}
+
+.my-car {
+  height: 40px;
+  width: 25px;
+  background-color: red;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10px;
+}
+
+.cars {
+  height: 40px;
+  width: 25px;
+  position: absolute;
+  top: -40px;
+  background-color: green;
+}
+
+@keyframes cars {
+  0% {
+    top: -40px;
+  }
+  100% {
+    top: 790px;
+  }
+}
+
+.go {
+  animation: cars 1s infinite linear;
+}
+ 
+.cars.middle {
+  left: 175px;
+}
+
+.cars.left {
+  left: 225px;
+}
+
+.cars.right {
+  left: 125px;
+}
