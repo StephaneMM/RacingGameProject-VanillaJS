@@ -33,9 +33,13 @@
   0% {
     top: -40px;
   }
-  100% {
+  100% { 
     top: 790px;
   }
+}
+
+.game-div > *{
+  overflow: hidden;
 }
 
 .go {
