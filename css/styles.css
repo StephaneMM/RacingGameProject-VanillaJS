@@ -10,6 +10,7 @@
   border: 1px solid black;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .my-car {
@@ -36,10 +37,6 @@
   100% { 
     top: 790px;
   }
-}
-
-.game-div > *{
-  overflow: hidden;
 }
 
 .go {
