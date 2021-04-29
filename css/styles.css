@@ -16,7 +16,7 @@
 .my-car {
   height: 40px;
   width: 25px;
-  background-color: red;
+  /* background-color: red; */
   margin: 0 auto;
   position: absolute;
   bottom: 10px;
@@ -26,17 +26,8 @@
   height: 40px;
   width: 25px;
   position: absolute;
-  top: -40px;
-  background-color: green;
-}
-
-@keyframes cars {
-  0% {
-    top: -40px;
-  }
-  100% { 
-    top: 790px;
-  }
+  top: -80px;
+  /* background-color: green; */
 }
 
 .go {
@@ -53,4 +44,81 @@
 
 .cars.right {
   left: 125px;
+}
+
+img{
+  height: auto;
+  width: 25px;
+}
+
+/* ------ ROAD MANAGEMENT ------- */
+
+.road img{
+  width: 215px;
+  height: auto;
+}
+
+.road{
+  position: absolute;
+  margin: 0 auto;
+  left: 81px;
+}
+
+.road.out{
+  animation: road-out 0.9s infinite linear;
+}
+.road.hight{
+  animation: road-hight 0.9s infinite linear;
+}
+.road.mid{
+  animation: road-mid 0.9s infinite linear;
+}
+.road.low{
+  animation: road-low 0.9s infinite linear;
+}
+
+@keyframes cars {
+  0% {
+    top: -150px;
+  }
+  100% { 
+    top: 790px;
+  }
+}
+
+
+@keyframes road-hight {
+  0% {
+    top: 0px;
+  }
+  100% { 
+    top: 293px;
+  }
+}
+
+@keyframes road-mid {
+  0% {
+    top: 293px;
+  }
+  100% { 
+    top: 586px;
+  }
+}
+
+@keyframes road-low {
+  0% {
+    top: 586px;
+  }
+  100% { 
+    top: 879px;
+  }
+}
+
+@keyframes road-out {
+  0% {
+    top: -293px;
+  }
+  100% { 
+    top: 0px;
+  }
 }
