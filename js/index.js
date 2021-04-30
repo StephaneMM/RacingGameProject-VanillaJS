@@ -1,8 +1,11 @@
+console.log("Alert Hello");
 let myCar = document.querySelector(".my-car");
 let swerveBy = 50;
 let cars = document.querySelectorAll(".cars");
 let game = document.querySelector(".game-div");
+let startBtn = document.querySelector(".btn.start");
 
+// _______ Gameboard relate function ______
 function driving(e) {
   if (e.key === "ArrowLeft") {
     myCar.style.left = `${parseInt(myCar.style.left) - swerveBy}px`;
@@ -34,7 +37,8 @@ function creatingSpace(index) {
   newCar.className = "cars go ";
   newCar.className += index === 0 ? "left" : index === 1 ? "middle" : "right";
   game.appendChild(newCar);
-  newCar.innerHTML = '<img class="cars-img" src="./img/line-yellow-car.png" alt="yellow-car">';
+  newCar.innerHTML =
+    '<img class="cars-img" src="./img/line-yellow-car.png" alt="yellow-car">';
 
   const timeoutId = setTimeout(() => {
     clearTimeout(timeoutId);
@@ -71,6 +75,12 @@ function checkCollision() {
   return touch.includes(true);
 }
 
+function startGame() {
+  setTimeout(() => {
+_FRAMEID = requestAnimationFrame(gameLoop);
+  }, 3000);
+}
+
 let _FRAMEID;
 let tick = 0;
 
@@ -91,13 +101,16 @@ const gameLoop = () => {
   if (checkCollision() === true) {
     cancelAnimationFrame(_FRAMEID);
   }
+
+  
 };
 
-_FRAMEID = requestAnimationFrame(gameLoop);
 
 window.onbeforeunload = () => {
   cancelAnimationFrame(_FRAMEID);
 };
+
+startBtn.addEventListener("click",startGame)
 
 //cancelAnimationFrame(_FRAMEID)
 
