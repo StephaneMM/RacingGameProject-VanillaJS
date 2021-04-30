@@ -1,6 +1,6 @@
 console.log("Alert Hello");
 let myCar = document.querySelector(".my-car");
-let swerveBy = 50;
+let swerveBy = 70;
 let cars = document.querySelectorAll(".cars");
 let game = document.querySelector(".game-div");
 let startBtn = document.querySelector(".btn.start");
