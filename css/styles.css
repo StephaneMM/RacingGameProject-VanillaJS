@@ -2,15 +2,66 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Courier", "Courier New", Serif;
 }
 
+body{
+  background-color: #fff4aa;
+}
+
+/* ______ BUTTONS MANAGEMENT _______ */
+/* .btn:hover {
+  background: #e6e6e6;
+  box-shadow: 0 5px #aaa;
+  color: #888;
+} */
+
+/* Imitate a pressed effect for buttons */
+.btn:active {
+  top: 6px;
+  box-shadow: none;
+}
+
+.btn {
+  background: #e8103b;
+  box-shadow: 0 6px #890923;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  margin: 0 7px 11px 0;
+  padding: 0 10px;
+  text-align: center;
+  position: relative;
+}
+
+.btn:hover {
+  background: #c80e33;
+  box-shadow: 0 5px #69071b;
+  color: #fff;
+}
+
+
+
 .game-div {
-  height: 750px;
+  height: 98vh;
   width: 375px;
-  border: 1px solid black;
-  margin: 0 auto;
+  border: 1px solid rgb(0, 0, 0);
+  margin: auto auto;
   position: relative;
   overflow: hidden;
+  background-color: #129306;
+}
+
+.menu {
+  display: flex;
+  height: 25vh;
+  width: 375px;
+  margin:  auto 0;
+  flex-direction: column;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
 }
 
 .my-car {
@@ -19,7 +70,8 @@
   /* background-color: red; */
   margin: 0 auto;
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
+  z-index: 3;
 }
 
 .cars {
@@ -28,6 +80,7 @@
   position: absolute;
   top: -80px;
   /* background-color: green; */
+  z-index: 2;
 }
 
 .go {
@@ -62,6 +115,7 @@ img{
   position: absolute;
   margin: 0 auto;
   left: 81px;
+  z-index: 0;
 }
 
 .road.out{
